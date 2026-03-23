@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viraj | Cinematickar Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syne:wght@800&display=swap');
+        
+        :root { --gold: #c5a059; --bg: #080808; }
+        body { background-color: var(--bg); color: #fff; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
+
+        .cinematic-header { font-family: 'Syne', sans-serif; text-transform: uppercase; line-height: 0.8; letter-spacing: -0.05em; }
+        
+        /* Image B&W to Color Effect */
+        .cinematic-img {
+            filter: grayscale(100%);
+            transition: filter 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s ease;
+        }
+        .cinematic-img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+
+        .glass-nav { background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+        .video-container {
+            position: relative;
+            background: #111;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .video-container:hover { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(197, 160, 89, 0.2); }
+
+        .section-title { font-size: 10px; letter-spacing: 0.8em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 1.5rem; display: block; text-align: center; }
+
+        .skill-badge { padding: 8px 20px; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .skill-badge:hover { border-color: var(--gold); color: var(--gold); }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: var(--gold); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-[100] px-8 py-5 flex justify-between items-center glass-nav">
+        <div class="text-xl font-black italic tracking-tighter uppercase">CINEMATIC<span class="text-[#c5a059]">KAR.</span></div>
+        <div class="hidden md:flex gap-8 text-[10px] uppercase font-bold tracking-widest opacity-60">
+            <a href="#showreel" class="hover:text-[#c5a059] transition">Showreel</a>
+            <a href="#about" class="hover:text-[#c5a059] transition">About</a>
+            <a href="#cinematography" class="hover:text-[#c5a059] transition">Visuals</a>
+            <a href="#motion" class="hover:text-[#c5a059] transition">Motion</a>
+            <a href="#contact" class="hover:text-[#c5a059] transition">Contact</a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 flex flex-col justify-center items-center text-center px-6">
+        <div data-aos="fade-up">
+            <h1 class="cinematic-header text-[16vw] md:text-[10vw] mb-4">VIRAJ</h1>
+            <p class="text-[9px] md:text-xs tracking-[1.2em] uppercase text-zinc-500 font-bold mb-8 italic">Visual Storyteller • Cinematographer</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://www.instagram.com/vp__cinematics?igsh=MTRqaGl1ZGN6Mm4yYQ==" target="_blank" class="px-8 py-3 bg-white text-black text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-[#c5a059] transition duration-500">Instagram</a>
+                <a href="mailto:virajpotale8873@gmail.com" class="px-8 py-3 border border-white/20 text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-white/10 transition">Email Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="showreel" class="py-10 px-6 border-t border-white/5">
+        <span class="section-title" data-aos="fade-up">Official Showreels</span>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+            <div class="video-container aspect-video" data-aos="fade-right">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/rzDYTqzY3FA" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container aspect-video" data-aos="fade-left">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VkQfvbHSTKQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 px-6 bg-zinc-950/20">
+        <div class="max-w-6xl mx-auto">
+            <span class="section-title" data-aos="fade-up">Behind the Lens</span>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative group" data-aos="fade-right">
+                    <div class="relative overflow-hidden rounded-2xl border border-white/10 aspect-[4/5] bg-white/5">
+                        <img src="viraj-1.jpeg" alt="Viraj Profile" class="w-full h-full object-cover cinematic-img">
+                    </div>
+                    <div class="absolute inset-0 border border-[#c5a059]/20 rounded-2xl transform scale-105 group-hover:border-[#c5a059]/50 transition duration-1000 pointer-events-none"></div>
+                </div>
+                <div class="space-y-6" data-aos="fade-left">
+                    <h3 class="text-4xl md:text-5xl font-extrabold cinematic-header mb-6 italic">Capturing Dreams <span class="text-zinc-500">into Frames.</span></h3>
+                    <p class="text-zinc-400 leading-relaxed font-light text-base mb-8">
+                        Me **Viraj**, ek dedicated Cinematographer ani Video Editor. Fkat frames record karna majha uddesh nahi, tar pratyek short madhe ek cinematic storytelling, raw emotion, ani unique visual experience create karna majhi visual signature ahe. 
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 border-t border-white/10 pt-8 text-center md:text-left">
+                        <div>
+                            <p class="text-3xl font-extrabold cinematic-header text-[#c5a059]">50+</p>
+                            <p class="text-[9px] uppercase tracking-widest text-zinc-500">Projects Directed</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-extrabold cinematic-header text-[#c5a059]">4K</p>
+                            <p class="text-[9px] uppercase tracking-widest text-zinc-500">Mastered Quality</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <span class="section-title" data-aos="fade-up">Technical Arsenal</span>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-right">
+                    <div class="p-5 bg-white/5 rounded-lg border border-white/5 text-center transition hover:border-[#c5a059]">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" class="w-8 h-8 mx-auto mb-3">
+                        <p class="text-[9px] font-bold uppercase tracking-widest">Premiere Pro</p>
+                    </div>
+                    <div class="p-5 bg-white/5 rounded-lg border border-white/5 text-center transition hover:border-[#c5a059]">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" class="w-8 h-8 mx-auto mb-3">
+                        <p class="text-[9px] font-bold uppercase tracking-widest">After Effects</p>
+                    </div>
+                    <div class="p-5 bg-white/5 rounded-lg border border-white/5 text-center transition hover:border-[#c5a059]">
+                        <img src="https://www.blackmagicdesign.com/images/products/davinciresolve/icons/resolve-icon.png" class="w-8 h-8 mx-auto mb-3">
+                        <p class="text-[9px] font-bold uppercase tracking-widest">DaVinci Resolve</p>
+                    </div>
+                    <div class="p-5 bg-white/5 rounded-lg border border-white/5 text-center transition hover:border-[#c5a059]">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" class="w-8 h-8 mx-auto mb-3">
+                        <p class="text-[9px] font-bold uppercase tracking-widest">Photoshop</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3" data-aos="fade-left">
+                    <span class="skill-badge">Cinematography</span>
+                    <span class="skill-badge">Color Grading</span>
+                    <span class="skill-badge">Film Direction</span>
+                    <span class="skill-badge">Motion Design</span>
+                    <span class="skill-badge">Sound Design</span>
+                    <span class="skill-badge">VFX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cinematography" class="py-16 px-6 bg-zinc-950/30">
+        <span class="section-title" data-aos="fade-up">Cinematography & Visuals</span>
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div class="video-container aspect-[9/16]" data-aos="fade-up"><iframe class="w-full h-full" src="https://www.youtube.com/embed/XpihFH61sMo" allowfullscreen></iframe></div>
+            <div class="video-container aspect-[9/16]" data-aos="fade-up" data-aos-delay="50"><iframe class="w-full h-full" src="https://www.youtube.com/embed/HMzNmgyLw0A" allowfullscreen></iframe></div>
+            <div class="video-container aspect-[9/16]" data-aos="fade-up" data-aos-delay="100"><iframe class="w-full h-full" src="https://www.youtube.com/embed/yhGAK3I3U1g" allowfullscreen></iframe></div>
+            <div class="video-container aspect-[9/16]" data-aos="fade-up" data-aos-delay="150"><iframe class="w-full h-full" src="https://www.youtube.com/embed/jK3tC-hnrUI" allowfullscreen></iframe></div>
+            <div class="video-container aspect-[9/16]" data-aos="fade-up" data-aos-delay="200"><iframe class="w-full h-full" src="https://www.youtube.com/embed/frxO8mNM6KY" allowfullscreen></iframe></div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-8 grid md:grid-cols-2 gap-6">
+            <div class="video-container aspect-video" data-aos="zoom-in"><iframe class="w-full h-full" src="https://www.youtube.com/embed/FSZ5FSw07xM" allowfullscreen></iframe></div>
+            <div class="video-container aspect-video" data-aos="zoom-in" data-aos-delay="100"><iframe class="w-full h-full" src="https://www.youtube.com/embed/fDTIs_FtB8E" allowfullscreen></iframe></div>
+        </div>
+    </section>
+
+    <section id="motion" class="py-16 px-6">
+        <span class="section-title" data-aos="fade-up">Motion Graphics</span>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+             <div class="video-container aspect-[9/16] max-w-[280px] mx-auto" data-aos="fade-right">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/xTERhwq6FUc" allowfullscreen></iframe>
+            </div>
+            <div class="video-container aspect-video self-center" data-aos="fade-left">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/4UMDfFRkO4Y" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="films" class="py-16 px-6 bg-zinc-950/30">
+        <span class="section-title" data-aos="fade-up">Short Films</span>
+        <div class="max-w-5xl mx-auto space-y-8">
+            <div class="video-container aspect-video" data-aos="fade-up"><iframe class="w-full h-full" src="https://www.youtube.com/embed/5oMdMxCBZx8" allowfullscreen></iframe></div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="video-container aspect-video" data-aos="fade-right"><iframe class="w-full h-full" src="https://www.youtube.com/embed/ff7u5dwzhHw" allowfullscreen></iframe></div>
+                <div class="video-container aspect-video" data-aos="fade-left"><iframe class="w-full h-full" src="https://www.youtube.com/embed/V2OaYiKd0Mk" allowfullscreen></iframe></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-10 text-center border-t border-white/5">
+        <div data-aos="zoom-in">
+            <h2 class="cinematic-header text-6xl md:text-8xl mb-6 italic">LET'S SHOOT</h2>
+            <p class="text-[#c5a059] tracking-[0.5em] uppercase font-bold mb-12 italic">Available for projects worldwide</p>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <a href="https://www.instagram.com/vp__cinematics?igsh=MTRqaGl1ZGN6Mm4yYQ==" target="_blank" class="p-8 border border-white/10 rounded-2xl hover:bg-white/5 transition group">
+                    <p class="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">Instagram</p>
+                    <p class="text-xl font-bold group-hover:text-[#c5a059]">@vp__cinematics</p>
+                </a>
+                <div class="p-8 border border-white/10 rounded-2xl text-center">
+                    <p class="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">Direct Contact</p>
+                    <p class="text-xl font-bold italic mb-1">+91 7276108873</p>
+                    <p class="text-[10px] text-zinc-400">virajpotale8873@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center opacity-30 text-[8px] uppercase tracking-[1em] italic">
+        Viraj | Cinematickar © 2026 • Directed by Frames
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
